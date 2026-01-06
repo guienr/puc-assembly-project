@@ -1,0 +1,24 @@
+LER MACRO
+    MOV AH, 01h
+    INT 21h
+ENDM
+
+IMPRIMIR MACRO MSG
+    LEA DX, MSG
+    MOV AH, 09h
+    INT 21h
+ENDM
+
+PULA_LINHA MACRO 
+    MOV AH, 02h
+    MOV DL, 13
+    INT 21h
+    MOV DL, 10
+    INT 21h
+ENDM
+
+ESPACO MACRO
+    MOV AH, 02h
+    MOV DL, 20h
+    INT 21h
+ENDM
